@@ -1,0 +1,27 @@
+{
+	"name": "inlm/schema-generator-leanmapper",
+	"type": "library",
+	"description": "Lean Mapper bridge for inlm/schema-generator",
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "Jan Pecha",
+			"homepage": "https://www.janpecha.cz/"
+		}
+	],
+	"funding": [
+		{"type": "other", "url": "https://www.janpecha.cz/donate/schema-generator/"}
+	],
+	"require": {
+		"php": ">=5.6.0",
+		"inlm/schema-generator": "^1.0",
+		"inlm/schema-generator-dibi": "^1.0",
+		"tharos/leanmapper": "^3.0 || ^4.0"
+	},
+	"autoload": {
+		"classmap": ["src/"]
+	},
+	"require-dev": {
+		"nette/tester": "^2.0"
+	}
+}

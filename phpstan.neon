@@ -1,0 +1,18 @@
+parameters:
+	level: max
+
+	paths:
+		- src
+		- tests
+
+	fileExtensions:
+		- php
+		- phpt
+
+	excludePaths:
+		analyseAndScan:
+			- tests/*/php5/*
+
+	universalObjectCratesClasses:
+		- Dibi\Row
+		- LeanMapper\Row

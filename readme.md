@@ -68,9 +68,9 @@ $extractor = new Inlm\SchemaGenerator\Extractors\LeanMapperExtractor($directorie
 
 If primary column is `integer` (`@property int $id`), automatically gets `AUTO_INCREMENT`.
 
-Flag `m:schemaType` can be used with [custom types](custom-types.md) too - for example `m:schemaType(money)` or `m:schemaType(money unsigned)`.
+Flag `m:schemaType` can be used with [custom types](https://github.com/inlm/schema-generator/blob/master/docs/custom-types.md) too - for example `m:schemaType(money)` or `m:schemaType(money unsigned)`.
 
-In case if is flag `m:schemaType` missing, it uses [default type](default-types.md) or your [custom type](custom-types.md).
+In case if is flag `m:schemaType` missing, it uses [default type](https://github.com/inlm/schema-generator/blob/master/docs/default-types.md) or your [custom type](https://github.com/inlm/schema-generator/blob/master/docs/custom-types.md).
 
 
 ## Annotations
@@ -84,7 +84,7 @@ In case if is flag `m:schemaType` missing, it uses [default type](default-types.
 | `@schemaUnique`  | create UNIQUE INDEX | `@schemaUnique propertyA, propertyB`  |
 | `@schemaIgnore`  | ignore entity       | `@schemaIgnore`                       |
 
-You can define default [table options](table-options.md) globally.
+You can define default [table options](https://github.com/inlm/schema-generator/blob/master/docs/table-options.md) globally.
 
 
 ## Example

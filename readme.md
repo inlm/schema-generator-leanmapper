@@ -48,7 +48,7 @@ $directories = [
 ];
 
 $mapper = new LeanMapper\DefaultMapper;
-$extractor = new Inlm\SchemaGenerator\Extractors\LeanMapperExtractor($directories, $mapper);
+$extractor = new Inlm\SchemaGenerator\LeanMapperBridge\LeanMapperExtractor($directories, $mapper);
 ```
 
 ## Flags

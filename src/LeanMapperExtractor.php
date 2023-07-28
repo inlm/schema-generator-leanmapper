@@ -99,6 +99,10 @@
 			}
 
 			foreach ($properties as $property) {
+				if ($this->isPropertyIgnored($property)) {
+					continue;
+				}
+
 				if ($property->hasRelationship()) {
 					$relationship = $property->getRelationship();
 
@@ -297,6 +301,16 @@
 					$this->addIndexByType($indexType, $tableName, $columns, $generator);
 				}
 			}
+		}
+
+
+		/**
+		 * @return bool
+		 */
+		protected function isPropertyIgnored(Reflection\Property $property)
+		{
+			return $property->hasCustomFlag('schema-ignore')
+				|| $property->hasCustomFlag('schemaIgnore');
 		}
 
 

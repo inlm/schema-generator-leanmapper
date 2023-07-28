@@ -65,6 +65,7 @@ $extractor = new Inlm\SchemaGenerator\Extractors\LeanMapperExtractor($directorie
 | `m:schemaIndex`         | create INDEX for column        | `m:schemaIndex`                          |
 | `m:schemaPrimary`       | create PRIMARY KEY for column  | `m:schemaPrimary`                        |
 | `m:schemaUnique`        | create UNIQUE INDEX for column | `m:schemaUnique`                         |
+| `m:schemaIgnore`        | ignore property                | `m:schemaUnique`                         |
 
 If primary column is `integer` (`@property int $id`), automatically gets `AUTO_INCREMENT`.
 

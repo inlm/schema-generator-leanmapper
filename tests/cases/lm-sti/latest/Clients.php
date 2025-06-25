@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * @property int $id
  * @property string $type m:enum(self::TYPE_*)

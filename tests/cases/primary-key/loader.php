@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 if (PHP_VERSION_ID < 70200) {
 	require __DIR__ . '/php5/Mapper.php';
 	require __DIR__ . '/php5/Book.php';

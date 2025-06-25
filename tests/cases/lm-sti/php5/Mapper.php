@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 class Mapper extends \LeanMapper\DefaultMapper
 {
 	public function getEntityClass($table, LeanMapper\Row $row = NULL)

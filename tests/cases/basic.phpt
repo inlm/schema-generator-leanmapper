@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Inlm\SchemaGenerator\Configuration;
 use Inlm\SchemaGenerator\ConfigurationSerializer;
 use Inlm\SchemaGenerator\LeanMapperBridge\LeanMapperExtractor;

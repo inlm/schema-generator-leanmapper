@@ -7,7 +7,7 @@
 
 	class Mapper extends \LeanMapper\DefaultMapper
 	{
-		public function getEntityClass(string $table, \LeanMapper\Row $row = NULL): string
+		public function getEntityClass(string $table, ?\LeanMapper\Row $row = NULL): string
 		{
 			if ($table === 'user') {
 				if ($row === NULL) {

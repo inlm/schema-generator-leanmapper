@@ -53,7 +53,7 @@
 			$schemaFile,
 			$migrationsDirectory,
 			$entityDirectories,
-			array $options = NULL,
+			?array $options,
 			array $customTypes,
 			array $ignoredTables,
 			$databaseType,

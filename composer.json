@@ -16,7 +16,7 @@
 		"php": "8.0 - 8.4",
 		"inlm/schema-generator": "^1.0",
 		"inlm/schema-generator-dibi": "^1.0",
-		"tharos/leanmapper": "^3.0 || ^4.0"
+		"tharos/leanmapper": "^4.0"
 	},
 	"autoload": {
 		"classmap": ["src/"]

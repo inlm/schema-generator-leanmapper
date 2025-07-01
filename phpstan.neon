@@ -1,5 +1,6 @@
 parameters:
 	level: max
+	treatPhpDocTypesAsCertain: false
 
 	paths:
 		- src
@@ -8,10 +9,6 @@ parameters:
 	fileExtensions:
 		- php
 		- phpt
-
-	excludePaths:
-		analyseAndScan:
-			- tests/*/php5/*
 
 	universalObjectCratesClasses:
 		- Dibi\Row

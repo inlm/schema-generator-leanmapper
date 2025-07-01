@@ -13,6 +13,7 @@ use Tester\Assert;
 require __DIR__ . '/../bootstrap.php';
 require __DIR__ . '/custom-types/Author.php';
 require __DIR__ . '/custom-types/Book.php';
+require __DIR__ . '/custom-types/Image.php';
 
 
 test(function () {

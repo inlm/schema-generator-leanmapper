@@ -24,7 +24,7 @@
 		/** @var string|string[] */
 		protected $directories;
 
-		/** @var array<string, DataType> */
+		/** @var array<lowercase-string, DataType> */
 		protected $customTypes;
 
 		/** @var string|NULL */
@@ -71,9 +71,14 @@
 			}
 
 			$reflection = call_user_func($reflectionFactory, $this->mapper);
+
+			if (!($reflection instanceof \LeanMapper\Reflection\EntityReflection)) {
+				return;
+			}
+
 			$properties = $reflection->getEntityProperties();
 
-			if (empty($properties) || $this->isEntityIgnored($reflection->getDocComment())) {
+			if (empty($properties) || $this->isEntityIgnored((string) $reflection->getDocComment())) {
 				return;
 			}
 
@@ -148,6 +153,11 @@
 
 				$propertyName = $property->getName();
 				$columnName = $property->getColumn();
+
+				if ($columnName === NULL) {
+					continue;
+				}
+
 				$isPrimaryColumn = $columnName === $tablePrimaryColumn;
 				$columnType = NULL;
 

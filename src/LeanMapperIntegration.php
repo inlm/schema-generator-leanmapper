@@ -124,7 +124,7 @@
 		protected function createSqlDumper()
 		{
 			$dumper = new SchemaGenerator\Dumpers\SqlDumper($this->migrationsDirectory);
-			$dumper->setOutputStructure($dumper::YEAR_MONTH);
+			$dumper->setOutputStructure(SchemaGenerator\Dumpers\SqlDumper::YEAR_MONTH);
 			return $dumper;
 		}
 

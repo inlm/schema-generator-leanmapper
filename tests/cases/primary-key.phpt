@@ -12,11 +12,16 @@ use Inlm\SchemaGenerator\SchemaGenerator;
 use Tester\Assert;
 
 require __DIR__ . '/../bootstrap.php';
-$baseDir = require __DIR__ . '/primary-key/loader.php';
+
+$directory = __DIR__ . '/primary-key';
+
+require $directory . '/Mapper.php';
+require $directory . '/Book.php';
+require $directory . '/BookMeta.php';
 
 
-test(function () use ($baseDir) {
-	$extractor = new LeanMapperExtractor($baseDir, new \Test\LeanMapperExtractor\PrimaryKey\Mapper);
+test(function () use ($directory) {
+	$extractor = new LeanMapperExtractor($directory, new \Test\LeanMapperExtractor\PrimaryKey\Mapper);
 
 	$schema = $extractor->generateSchema([], [], Database::MYSQL);
 	$serialized = ConfigurationSerializer::serialize(new Configuration($schema));

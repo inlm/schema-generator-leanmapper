@@ -9,11 +9,17 @@ use Inlm\SchemaGenerator\LeanMapperBridge\LeanMapperExtractor;
 use Tester\Assert;
 
 require __DIR__ . '/../bootstrap.php';
-$baseDir = require __DIR__ . '/single-table-inheritance/loader.php';
+
+$directory = __DIR__ . '/single-table-inheritance';
+
+require $directory . '/User.php';
+require $directory . '/UserIndividual.php';
+require $directory . '/UserCompany.php';
+require $directory . '/Mapper.php';
 
 
-test(function () use ($baseDir) {
-	$extractor = new LeanMapperExtractor($baseDir, new Test\LeanMapperExtractor\SingleTableInheritance\Mapper);
+test(function () use ($directory) {
+	$extractor = new LeanMapperExtractor($directory, new Test\LeanMapperExtractor\SingleTableInheritance\Mapper);
 
 	$schema = $extractor->generateSchema();
 	$serialized = ConfigurationSerializer::serialize(new Configuration($schema));
